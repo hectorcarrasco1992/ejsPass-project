@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    
+        <title>Random People</title>
+    </head>
+    <body>
+        <a href="/auth/options">go back to options</a>
+        <header>Random Profiles</header>
+            <% allUsers.forEach(({name: {first, last}, picture}) => {%> 
+                <div class="userBox">
+                    <img class="randomPic" src=<%=`${picture.large}`%>>
+                    <p><%= `${first} ${last}` %> </p>
+                </div>
+            <%}) %>
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>  
+    </body>
+</html> 

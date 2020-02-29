@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+        
+        <title>Movies</title>
+    </head>
+    <body id="movieContain">
+        <a href="/auth/options">head back to options</a>
+        <br>
+        <header>Movies Now Playing</header>
+        <% all.forEach(({ title, overview, backdrop_path }) => {%> 
+                <div class="data">
+                    <div class="left">
+                        <img class="moviesPic" src=<%=`${img}${backdrop_path}`%>>
+                    </div>
+                    <div class="movieData">
+                        <h2><%= `${title}` %> </h2>
+                        <p><%= `${overview}` %> </p>
+                    </div>
+                </div>
+                <%}) %>
+        
+    </body>
+</html>
